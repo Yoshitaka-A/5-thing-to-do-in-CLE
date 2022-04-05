@@ -1,0 +1,282 @@
+html {
+  font-size: 100%;
+}
+div {
+  margin:2em;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Barlow', sans-serif; */
+}
+
+/* .menu{
+  background-color:red;
+  flex: 0 0 70%;
+  padding: 10px 20px;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.menu > div{
+  padding: 0px 20px;
+} */
+
+/* ==== GRID SYSTEM ==== */
+.container{
+    display: flex;
+    width: 100%;
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    padding: 0px;
+    background-color: ghostwhite;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+   float: left;
+    margin: 0% 0%;
+    min-height: 1.25rem;
+    padding: 20px; 
+}
+
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.67%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.67%;
+  }
+
+  .col-6 {
+    width: 50%;
+}
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.67%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.67%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+.row > div{
+    position:relative;
+}
+
+
+/* ==== FONT ==== */
+@font-face{ 
+	font-family: 'milkshake';
+  src: url('../fonts/milkshake-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'milkshake', Arial, sans-serif; 
+  /* font-family: 'Lobster', cursive; */
+/*  font-family: 'Raleway', sans-serif;*/
+/*  text-transform: uppercase;*/
+  font-size: 10em;
+  line-height: 100%; /* <- I eventually end up 100% */
+}
+
+h2 {
+  font-family: 'milkshake', Arial, sans-serif; 
+  font-size: 3em;
+/*  line-height: 10%;*/
+/*  margin-top:4rem;*/
+}
+
+h3 {
+    font-size: 1.775rem;
+}
+
+h4 {
+    font-size: 1.325rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #311D00;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Barlow', sans-serif; */
+  font-size: 1.3em;
+  /* width: 50rem;  */
+  line-height: 1.6em;
+  color:#b39700;
+  margin: 0.75em 0px;
+  /*  letter-spacing: 0.05rem;*/
+}
+
+a {
+ color: #311D00;
+ text-decoration: none;  
+}
+a:hover {
+ color: #FF3C00;
+ text-decoration: none;
+}
+
+.gototop {
+  text-align: right; /* <- I don't thnk it works... */
+  color: #675600;
+  text-transform: uppercase;  
+}
+
+/* icon and number size */
+/* .iconbox {
+  margin-left: auto;
+} */
+
+img.icon {
+  width: 15%;
+  padding: 3px;
+  opacity: 1.0;
+  border-radius: 30px;
+  background-color: ghostwhite;
+}
+
+img.icon:hover {
+  opacity: 0.8;
+  background-color: #FF3C00;
+}
+
+img.bignumber {
+  width: 180%;
+}
+
+img.number {
+  width: 75%;
+  position: relative;
+  /* top: -150px;
+  left: 0px; */
+}
+
+/* p.numberM {
+  font-family: 'milkshake', Arial, sans-serif; 
+  font-size: 20em;
+} */
+
+
+.art, .music, .nature, .sports, .beer {
+  display: none;
+  /* transition : 1s; */
+  /* opacity: 0;
+  transform: translate(0, 100px); */
+}
+
+/* Fade Up Animation here */
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+
+
+.footer{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: white;
+  background-color:grey;
+
+  display:flex;
+  width:100%;
+  justify-content: center;
+  padding: 20px;
+  z-index:99;
+}
+
+/* This is clearfix, clearing content after each row*/
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* mobile */
+@media only screen and (max-width: 568px) {
+  nav.desktopNavigation {
+    display:none;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1em;
+}
+
+  .logo{
+  width:65%
+}
+  #content{
+    padding:10px;
+    width:calc(100% - 20px);
+  }
+
+}
